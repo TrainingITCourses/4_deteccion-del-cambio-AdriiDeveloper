@@ -1,0 +1,7 @@
+<mat-form-field>
+  <mat-select placeholder="Selecciona un tipo" (selectionChange)="criterionTypeChange.emit($event.value)"> 
+    <mat-option *ngFor="let type of criterionType" [value]="type.id">
+      {{type.name}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>

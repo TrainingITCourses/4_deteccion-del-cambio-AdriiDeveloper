@@ -1,0 +1,6 @@
+<h3>Selecciona un tipo de criterio para tú búsqueda</h3>
+
+<app-search-criterion-values (criterionTypeChange)="onCriterionTypeChange($event)"></app-search-criterion-values>
+
+<app-search-criterion-types [hidden]="!criterionType" [criterionType]="criterionResults$ | async" 
+                            (criterionTypeChange)="onCriterionResultChange($event)"></app-search-criterion-types>

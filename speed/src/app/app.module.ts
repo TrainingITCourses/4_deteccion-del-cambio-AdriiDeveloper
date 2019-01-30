@@ -1,18 +1,36 @@
+// Angular Modules
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
+// Material Modules
+import { MatSelectModule, MatFormFieldModule } from '@angular/material';
+
+// App Component
 import { AppComponent } from './app.component';
+
+// Change Detection Component
+import { ChangeDetectionComponent, CriterionTypeComponent, CriterionValuesComponent, ResultsComponent, SearchComponent } from './store/components';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ChangeDetectionComponent,
+    CriterionTypeComponent, 
+    CriterionValuesComponent,
+    ResultsComponent,
+    SearchComponent
   ],
   imports: [
+    BrowserAnimationsModule,
     BrowserModule,
-    AppRoutingModule
+    FormsModule,
+    HttpClientModule,
+    MatFormFieldModule,
+    MatSelectModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

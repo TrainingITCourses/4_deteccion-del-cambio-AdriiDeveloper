@@ -1,0 +1,8 @@
+<ng-container *ngIf="filteredLaunches?.length > 0">
+  <h2>Resultados de la búsqueda: ({{ filteredLaunches?.length }})</h2>
+  <p *ngFor="let launch of filteredLaunches">
+    <strong>Name: </strong>{{ launch.name }}<ng-container *ngIf="launch.location?.name"> - <strong>Location: </strong> {{ launch.location?.name }}</ng-container>
+  </p>
+</ng-container>
+
+<h2 *ngIf="filteredLaunches?.length === 0">No hay resultados para la búsqueda seleccionada</h2>
